@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".HomeListActivity"
+    tools:showIn="@layout/activity_home">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/infinite_listview_text_loading_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loading_mode"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/infinite_listview_radiogroup_loading_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/infinite_listview_text_loading_mode"
+            android:labelFor="@+id/infinite_listview_text_loading_mode"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/infinite_listview_radio_scroll_to_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/scroll_to_bottom"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/infinite_listview_radio_scroll_to_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/scroll_to_top"
+                android:textSize="16sp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/infinite_listview_text_stop_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/infinite_listview_radiogroup_loading_mode"
+            android:text="@string/stop_position"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/infinite_listview_radiogroup_stop_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/infinite_listview_text_stop_position"
+            android:labelFor="@+id/infinite_listview_text_stop_position"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/infinite_listview_radio_start_of_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/start_of_list"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/infinite_listview_radio_end_of_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/end_of_list"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/infinite_listview_radio_remain_unchanged"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/remain_unchanged"
+                android:textSize="16sp" />
+        </RadioGroup>
+
+        <com.rahul.list.widget.InfiniteScrollListView
+            android:id="@+id/infinite_listview_infinitescrolllistview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/infinite_listview_radiogroup_stop_position" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <!--    <TextView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Hello World!"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--        app:layout_constraintRight_toRightOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/infinite_listview_imageview_github"-->
+    <!--        android:contentDescription="@string/github"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="5dp"-->
+    <!--        android:layout_marginBottom="5dp"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:src="@drawable/ic_github"/>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
